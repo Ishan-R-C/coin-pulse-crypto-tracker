@@ -1,0 +1,19 @@
+.coin-head {
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+.coin-desc {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .coin-head {
+    padding-top: 1rem;
+    padding-left: 0.1rem;
+  }
+  .coin-desc {
+    padding: 0rem;
+    padding-bottom: 1rem;
+  }
+}

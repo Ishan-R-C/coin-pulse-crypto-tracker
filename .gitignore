@@ -1,0 +1,21 @@
+# Python venv
+crypto_backend/venv/
+
+# Node modules
+crypto_frontend/node_modules/
+
+# Environment files
+crypto_frontend/.env
+
+# Cache & build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+.DS_Store
+dist/
+build/
+.next/

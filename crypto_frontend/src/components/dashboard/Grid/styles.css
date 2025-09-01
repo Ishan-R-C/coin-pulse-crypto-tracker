@@ -1,0 +1,164 @@
+.grid-box {
+  width: 330px;
+  height: 330px;
+  background-color: var(--darkgrey);
+  border: 2px solid var(--darkgrey);
+  border-radius: 18px;
+}
+.grid-box:hover {
+  border: 2px solid var(--green);
+  transition: all 0.3s;
+}
+.grid-box-red:hover {
+  border: 2px solid var(--red);
+  transition: all 0.3s;
+}
+.coin-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem;
+}
+
+.coin-icon {
+  height: 4rem;
+  width: 4rem;
+}
+
+.name-symbol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.coin-symb {
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.coin-name {
+  color: var(--grey);
+  text-transform: capitalize;
+  font-weight: light;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.perc-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 1.5rem;
+}
+
+.perc {
+  border: 2px solid var(--green);
+  border-radius: 2rem;
+  padding: 0.35rem 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--green);
+  min-width: 60px;
+}
+.perc:hover {
+  background-color: var(--green);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.perc-red {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+.perc-red:hover {
+  background-color: var(--red);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.up-chip {
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  height: 2rem !important;
+  width: 2rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--green);
+  font-size: 1rem;
+}
+.up-chip:hover {
+  background-color: var(--green);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.down-chip {
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  height: 2rem !important;
+  width: 2rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--red);
+  font-size: 1rem;
+}
+.down-chip:hover {
+  background-color: var(--red);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.price-desc {
+  margin: 2rem;
+}
+.price {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.market-info {
+  font-size: 1rem;
+  color: var(--grey);
+}
+
+.icon-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watchlist-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  color: var(--green);
+  padding: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem !important;
+}
+
+.watchlist-icon-red {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+
+@media only screen and (max-width: 800px) {
+  .grid-box {
+    width: 350px;
+    height: 280px;
+    background-color: var(--darkgrey);
+    border: 2px solid var(--darkgrey);
+    border-radius: 18px;
+  }
+  .grid-price {
+    font-size: 1.3rem;
+  }
+}

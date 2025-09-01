@@ -1,0 +1,23 @@
+.news-scroller {
+  margin: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.news-scroller::-webkit-scrollbar-thumb {
+  background: var(--black);
+}
+
+@media only screen and (max-width: 800px) {
+  .news-scroller {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+}

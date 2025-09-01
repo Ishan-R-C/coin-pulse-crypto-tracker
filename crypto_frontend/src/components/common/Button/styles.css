@@ -1,0 +1,32 @@
+.butn {
+  background-color: var(--violet);
+  color: var(--white);
+  border: 2px solid var(--violet);
+  padding: 0.7rem 1.5rem;
+  border-radius: 3rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  min-width: 100px;
+  text-transform: capitalize;
+}
+.butn:hover {
+  box-shadow: 4px 4px 20px rgba(100, 0, 214, 0.53);
+  transition: all 0.3s;
+}
+.outline-butn {
+  background-color: var(--black);
+  color: var(--white);
+  border: 2px solid var(--violet);
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  min-width: 100px;
+  text-transform: capitalize;
+}
+.outline-butn:hover {
+  background-color: var(--violet);
+  transition: all 0.3s;
+}

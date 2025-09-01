@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --white: #e3e3e3;
+  --blue: #3a8ee9;
+  --darkblue: #0037db;
+  --black: #111;
+  --grey: #a3a3a3;
+  --darkgrey: #1d1d1d;
+  --violet: rgb(100, 0, 214);
+  --green: #2b961d;
+  --red: #f94141;
+  --purple: rgb(139, 1, 193);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+}
+
+::selection {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--violet);
+  border-radius: 3rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple);
+}
+
+a {
+  color: var(--white) !important;
+  text-decoration: none !important;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.fallback {
+  color: var(--grey);
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  font-family: "Inter";
+  margin-top: 2rem;
+  margin-bottom: 100vw;
+}
+.coin-wrap {
+  display: block;
+  width: 90%;
+  margin: 0.2rem auto;
+  background-color: var(--darkgrey);
+  border-radius: 1rem;
+  padding: 0rem 1rem;
+}
+
+.day-coin-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1.5rem;
+  gap: 2rem;
+}
+
+.coin-table {
+  display: contents;
+}
+
+.coin-table tbody {
+  display: contents; /* removes tbody's visual effect but keeps it valid */
+}
+
+@media only screen and (max-width: 800px) {
+  .coin-wrap {
+    width: 85%;
+  }
+}
