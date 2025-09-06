@@ -2,6 +2,9 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import requests
 import time
+import os
+
+COINGECKO_API_KEY = os.getenv("COINGECKO_API_KEY", None)
 
 app = FastAPI()
 
@@ -25,6 +28,12 @@ def get_from_cache(key: str, url: str, params: dict = None, ttl: int = 60):
     now = time.time()
     if key in CACHE and now - CACHE[key]["time"] < ttl:
         return CACHE[key]["data"]
+
+    if params is None:
+        params = {}
+
+    if COINGECKO_API_KEY:
+        params["x_cg_demo_api_key"] = COINGECKO_API_KEY
 
     try:
         response = requests.get(url, params=params, timeout=10)
