@@ -31,7 +31,7 @@ function Grid({ coin }) {
                 coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
               }`}
               onClick={(e) => {
-                if (watchlist.includes(coin.id)) {
+                if (watchlist?.includes(coin.id)) {
                   removeItemToWatchlist(e, coin.id, setIsCoinAdded);
                 } else {
                   setIsCoinAdded(true);
@@ -39,7 +39,11 @@ function Grid({ coin }) {
                 }
               }}
             >
-              {watchlist.includes(coin.id) ? <StarIcon /> : <StarOutlineIcon />}
+              {watchlist?.includes(coin.id) ? (
+                <StarIcon />
+              ) : (
+                <StarOutlineIcon />
+              )}
             </div>
           </div>
         </div>
