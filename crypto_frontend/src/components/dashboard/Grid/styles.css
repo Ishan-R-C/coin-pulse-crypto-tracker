@@ -161,4 +161,7 @@
   .grid-price {
     font-size: 1.3rem;
   }
+  .watchlist-icon {
+    padding: 0.5rem !important;
+  }
 }

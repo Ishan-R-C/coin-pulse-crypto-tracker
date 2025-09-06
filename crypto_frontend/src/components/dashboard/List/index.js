@@ -96,7 +96,7 @@ function List({ coin }) {
         </td>
       </Tooltip>
       <td
-        className={`watchlist-icon ${
+        className={`watchlist-icon wlist-icon ${
           coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
         } star-icon`}
         onClick={(e) => {
