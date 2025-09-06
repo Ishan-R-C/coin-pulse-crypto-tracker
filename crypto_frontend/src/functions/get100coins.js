@@ -5,6 +5,7 @@ export const get100coins = () => {
     .get("/api/coins/markets")
     .then((response) => {
       console.log("100 coins API CALLED (backend)");
+      console.log("API RESPONSE =>", response.data);
       return response.data;
     })
     .catch((error) => {
