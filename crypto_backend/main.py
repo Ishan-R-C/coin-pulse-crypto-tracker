@@ -27,19 +27,26 @@ def get_from_cache(key: str, url: str, params: dict = None, ttl: int = 60):
         return CACHE[key]["data"]
 
     try:
-        response = requests.get(url, params=params, timeout=60)
+        response = requests.get(url, params=params, timeout=10)
+        if response.status_code == 429:
+            raise HTTPException(status_code=429, detail="Rate limit exceeded on CoinGecko")
+        elif response.status_code == 404:
+            raise HTTPException(status_code=404, detail="Resource not found on CoinGecko")
+        elif response.status_code >= 500:
+            raise HTTPException(status_code=502, detail="CoinGecko server error")
+
         response.raise_for_status()
         data = response.json()
+
+    except requests.exceptions.Timeout:
+        raise HTTPException(status_code=504, detail="CoinGecko request timed out")
     except requests.exceptions.RequestException as e:
-        print(f"Request error: {e}")
-        raise HTTPException(status_code=500, detail=f"Request failed: {str(e)}")
-    except ValueError as e:
-        print(f"JSON decode error: {e}")
-        raise HTTPException(status_code=500, detail="Invalid JSON response from CoinGecko")
+        raise HTTPException(status_code=502, detail=f"Upstream request error: {str(e)}")
+    except ValueError:
+        raise HTTPException(status_code=502, detail="Invalid JSON response from CoinGecko")
 
     CACHE[key] = {"data": data, "time": now}
     return data
-
 
 @app.get("/")
 def root():
