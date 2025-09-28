@@ -6,6 +6,7 @@ crypto_frontend/node_modules/
 
 # Environment files
 crypto_frontend/.env
+crypto_backend/.env
 
 # Cache & build files
 __pycache__/
